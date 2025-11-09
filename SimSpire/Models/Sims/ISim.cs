@@ -17,7 +17,7 @@ public interface ISim
     List<Stat> Stats { get; set; }
     List<string> Notes { get; set; }
 
-    public void CreateSim(string name, int age, SimForm species, string? profPic, LifeCycle? journey, List<Trait> traits, List<Relationship> relationships, List<Stat> stats, List<string>? notes);
+    public static void CreateSim(string name, int age, SimForm species, string? profPic, LifeCycle? journey, List<Trait> traits, List<Relationship> relationships, List<Stat> stats, List<string>? notes);
     public void KillSim();
     public void IncreaseAge();
     public void CelebrateBirthday();

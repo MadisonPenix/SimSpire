@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace SimSpire.Models
 {
     public abstract class SimBase : ISim
@@ -14,8 +16,9 @@ namespace SimSpire.Models
         public List<Relationship> Relationships { get; set; } = new List<Relationship>();
         public List<Stat> Stats { get; set; } = new List<Stat>();
         public List<string> Notes { get; set; } = new List<string>();
-
-    public void CreateSim(string first, string last, int age, SimForm species, LifeStages lifeStage, string? imageURL, LifeCycle? journey, List<Trait> traits, List<Relationship> relationships, List<Stat> stats, List<string> notes)
+        
+        protected SimBase() { } //For EF Core
+        protected SimBase(string first, string last, int age, SimForm species, LifeStages lifeStage, string? imageURL, LifeCycle? journey, List<Trait> traits, List<Relationship> relationships, List<Stat> stats, List<string> notes)
         {
             FirstName = first;
             LastName = last;
