@@ -8,26 +8,19 @@ namespace SimSpire.Models
         public required string FirstName { get; set; }
         public required string LastName { get; set; }
         public int Age { get; set; }
-        public LifeStages LifeStage { get; set; }
-        public SimForm Species { get; set; }
         public string? ProfilePicture { get; set; }
-        public LifeCycle SoulsJourney { get; set; }
         public List<Trait> Traits { get; set; } = new List<Trait>();
         public List<Relationship> Relationships { get; set; } = new List<Relationship>();
         public List<Stat> Stats { get; set; } = new List<Stat>();
         public List<string> Notes { get; set; } = new List<string>();
         
         protected SimBase() { } //For EF Core
-        protected SimBase(string first, string last, int age, SimForm species, LifeStages lifeStage, string? imageURL, LifeCycle? journey, List<Trait> traits, List<Relationship> relationships, List<Stat> stats, List<string> notes)
+        protected SimBase(string first, string last, int age, string? imageURL,  List<Relationship> relationships, List<Stat> stats, List<string> notes)
         {
             FirstName = first;
             LastName = last;
             Age = age;
-            LifeStage = lifeStage;
-            Species = species;
             ProfilePicture = imageURL;
-            SoulsJourney = journey;
-            Traits.AddRange(traits);
             Relationships.AddRange(relationships);
             Stats.AddRange(stats);
             Notes.AddRange(notes);
@@ -52,26 +45,12 @@ namespace SimSpire.Models
             FirstName = firstName;
             LastName = lastName;
         }
-    public void ChangeSimForm(SimForm newForm)
-        {
-            Species = newForm;
-        }
+
     public void ChangeProfilePicture(string? imageURL)
         {
             ProfilePicture = imageURL;
         }
-    public void UpdateSoulsJourney()
-        {
-            //SoulsJourney.Update();
-        }
-    public void AddNewTrait(Trait trait)
-        {
-            //Trait.AddNewTrait();
-        }
-    public void DeleteTrait(Trait trait)
-        {
-            //Trait.DeleteTrait();
-        }
+
     public void UpdateRelationships(Relationship relationship)
         {
             //Relationship.UpdateRelationship();
