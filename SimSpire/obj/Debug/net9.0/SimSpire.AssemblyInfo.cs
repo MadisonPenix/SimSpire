@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimSpire")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a51fedf3ee990a37aabd7b8e2a8bf5c206ec45ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca5a6ec5f4385c638a33b7904dacc5ff8ccb3568")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimSpire")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimSpire")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
